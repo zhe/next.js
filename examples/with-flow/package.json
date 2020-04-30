@@ -7,16 +7,20 @@
     "dev": "next",
     "build": "next build",
     "flow": "flow",
-    "start": "next start"
+    "start": "next start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "next": "latest",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",
     "babel-plugin-transform-flow-strip-types": "6.22.0",
     "flow-bin": "0.77.0"
-  }
+  },
+  "snyk": true
 }
