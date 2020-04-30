@@ -5,7 +5,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt"
+    "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "cross-env": "^5.0.1",
@@ -13,7 +15,9 @@
     "next": "latest",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "webpack-bundle-size-analyzer": "^2.7.0"
+    "webpack-bundle-size-analyzer": "^2.7.0",
+    "snyk": "^1.316.1"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
