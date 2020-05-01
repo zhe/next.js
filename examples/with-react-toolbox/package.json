@@ -5,7 +5,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "toolbox": "react-toolbox-themr"
+    "toolbox": "react-toolbox-themr",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -13,7 +15,8 @@
     "react": "^16.7.0",
     "react-addons-css-transition-group": "^15.5.2",
     "react-dom": "^16.7.0",
-    "react-toolbox": "^2.0.0-beta.8"
+    "react-toolbox": "^2.0.0-beta.8",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "react-toolbox-themr": "^1.0.2"
@@ -32,5 +35,6 @@
     },
     "output": "public",
     "javascript": "./theme.js"
-  }
+  },
+  "snyk": true
 }
