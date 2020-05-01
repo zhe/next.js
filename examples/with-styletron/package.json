@@ -4,13 +4,17 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "next": "latest",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "styletron-engine-atomic": "^1.1.2",
-    "styletron-react": "^5.0.1"
-  }
+    "styletron-react": "^5.0.1",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
