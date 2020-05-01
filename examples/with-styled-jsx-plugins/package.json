@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "lost": "8.2.0",
@@ -12,7 +14,8 @@
     "postcss-nested": "2.1.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "styled-jsx-plugin-postcss": "0.1.0"
+    "styled-jsx-plugin-postcss": "0.1.0",
+    "snyk": "^1.316.1"
   },
   "license": "ISC",
   "postcss": {
@@ -20,5 +23,6 @@
       "lost": {},
       "postcss-nested": {}
     }
-  }
+  },
+  "snyk": true
 }
