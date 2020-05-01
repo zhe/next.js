@@ -5,7 +5,9 @@
     "dev": "node --icu-data-dir=node_modules/full-icu server.js",
     "build": "next build && npm run extract",
     "extract": "node ./scripts/extract '{pages,components}/*.{js,ts,tsx}'",
-    "start": "NODE_ENV=production node --icu-data-dir=node_modules/full-icu server.js"
+    "start": "NODE_ENV=production node --icu-data-dir=node_modules/full-icu server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@formatjs/cli": "1.1.12",
@@ -18,7 +20,9 @@
     "next": "latest",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-intl": "^3.1.12"
+    "react-intl": "^3.1.12",
+    "snyk": "^1.316.1"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
