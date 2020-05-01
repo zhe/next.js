@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "aphrodite": "^1.2.5",
@@ -12,7 +14,9 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-with-styles": "^2.2.0",
-    "react-with-styles-interface-aphrodite": "^3.1.1"
+    "react-with-styles-interface-aphrodite": "^3.1.1",
+    "snyk": "^1.316.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
