@@ -10,12 +10,15 @@
     "prestart": "npm run build",
     "start": "NODE_ENV=production node server.js",
     "predist": "npm run build",
-    "dist": "pkg . --out-dir dist"
+    "dist": "pkg . --out-dir dist",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "next": "latest",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "snyk": "^1.339.0"
   },
   "devDependencies": {
     "pkg": "^4.2.2"
@@ -27,5 +30,6 @@
     "scripts": [
       ".next/server/**/*.js"
     ]
-  }
+  },
+  "snyk": true
 }
